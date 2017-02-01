@@ -1,0 +1,1564 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          edu/knoldus/CurdAssignment.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package edu.knoldus
+</span>2 <span style=''>
+</span>3 <span style=''>import java.sql._
+</span>4 <span style=''>
+</span>5 <span style=''>/**
+</span>6 <span style=''>  * Created by knoldus on 1/2/17.
+</span>7 <span style=''>  */
+</span>8 <span style=''>
+</span>9 <span style=''>import java.sql.{Connection, DriverManager}
+</span>10 <span style=''>
+</span>11 <span style=''>trait connect {
+</span>12 <span style=''>  </span><span style='background: #AEF1AE'>Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</span><span style=''>
+</span>13 <span style=''>  val con1: Connection = </span><span style='background: #AEF1AE'>DriverManager.getConnection(&quot;jdbc:mysql://localhost/scala_1&quot;, &quot;root&quot;, &quot;root&quot;)</span><span style=''>
+</span>14 <span style=''>  val stmt: Statement = </span><span style='background: #AEF1AE'>con1.createStatement</span><span style=''>
+</span>15 <span style=''>
+</span>16 <span style=''>}
+</span>17 <span style=''>
+</span>18 <span style=''>class CurdAssignment extends connect{
+</span>19 <span style=''>
+</span>20 <span style=''>  def insertion(): Int = {
+</span>21 <span style=''>  //  Class.forName(&quot;com.mysql.jdbc.Driver&quot;)
+</span>22 <span style=''>   // val con1: Connection = DriverManager.getConnection(&quot;jdbc:mysql://localhost/scala_1&quot;, &quot;root&quot;, &quot;root&quot;)
+</span>23 <span style=''>    //val stmt: Statement = con1.createStatement
+</span>24 <span style=''>    </span><span style='background: #AEF1AE'>stmt.executeUpdate(&quot;insert into Employee(id,name,address,phone,dept_id,project_id) values(1,'Himanshu','Noida',9090,101,1001)&quot;)</span><span style=''>
+</span>25 <span style=''>    </span><span style='background: #AEF1AE'>stmt.executeUpdate(&quot;insert into Department(id,name) values(101,'Java')&quot;)</span><span style=''>
+</span>26 <span style=''>    </span><span style='background: #AEF1AE'>stmt.executeUpdate(&quot;insert into Project(id,name,dept_id,client_id) values(1001,'Carbonn Data',101,10001)&quot;)</span><span style=''>
+</span>27 <span style=''>    </span><span style='background: #AEF1AE'>stmt.executeUpdate(&quot;insert into Client(id,name,address,project_id) values(10001,'TCS','Noida Delhi',1001)&quot;)</span><span style=''>
+</span>28 <span style=''>    </span><span style='background: #AEF1AE'>1</span><span style=''>
+</span>29 <span style=''>  }
+</span>30 <span style=''>
+</span>31 <span style=''>  def retrieval(): Int = {
+</span>32 <span style=''>    //Class.forName(&quot;com.mysql.jdbc.Driver&quot;)
+</span>33 <span style=''>    //val con1: Connection = DriverManager.getConnection(&quot;jdbc:mysql://localhost/scala_1&quot;, &quot;root&quot;, &quot;root&quot;)
+</span>34 <span style=''>    //val stmt: Statement = con1.createStatement
+</span>35 <span style=''>    val rs: ResultSet = </span><span style='background: #AEF1AE'>stmt.executeQuery(&quot;select * from Employee&quot;)</span><span style=''>
+</span>36 <span style=''>    while (</span><span style='background: #AEF1AE'>rs.next()</span><span style=''>) {
+</span>37 <span style=''>      </span><span style='background: #F0ADAD'>println(rs.getInt(1) + &quot;  &quot; + rs.getString(2) + &quot; &quot; + rs.getString(3) + &quot; &quot; + rs.getString(4) + &quot; &quot; + rs.getString(5) + &quot; &quot; + rs.getString(6))</span><span style=''>
+</span>38 <span style=''>    }
+</span>39 <span style=''>    val rs1: ResultSet = </span><span style='background: #AEF1AE'>stmt.executeQuery(&quot;select * from Client&quot;)</span><span style=''>
+</span>40 <span style=''>    while (</span><span style='background: #AEF1AE'>rs1.next()</span><span style=''>) {
+</span>41 <span style=''>      </span><span style='background: #AEF1AE'>println(rs1.getInt(1) + &quot;  &quot; + rs1.getString(2) + rs1.getString(3) + &quot; &quot; + rs1.getString(4))</span><span style=''>
+</span>42 <span style=''>    }
+</span>43 <span style=''>    val rs2: ResultSet = </span><span style='background: #AEF1AE'>stmt.executeQuery(&quot;select * from Department&quot;)</span><span style=''>
+</span>44 <span style=''>    while (</span><span style='background: #AEF1AE'>rs2.next()</span><span style=''>) {
+</span>45 <span style=''>      </span><span style='background: #AEF1AE'>println(rs2.getInt(1) + &quot;  &quot; + rs2.getString(2))</span><span style=''>
+</span>46 <span style=''>    }
+</span>47 <span style=''>    val rs3: ResultSet = </span><span style='background: #AEF1AE'>stmt.executeQuery(&quot;select * from Project&quot;)</span><span style=''>
+</span>48 <span style=''>    while (</span><span style='background: #AEF1AE'>rs3.next()</span><span style=''>) {
+</span>49 <span style=''>      </span><span style='background: #AEF1AE'>println(rs3.getInt(1) + &quot;  &quot; + rs3.getString(2) + rs3.getString(3) + &quot; &quot; + rs3.getString(4))</span><span style=''>
+</span>50 <span style=''>    }
+</span>51 <span style=''>    </span><span style='background: #AEF1AE'>1</span><span style=''>
+</span>52 <span style=''>  }
+</span>53 <span style=''>
+</span>54 <span style=''>  def deletion(): Int = {
+</span>55 <span style=''>    //Class.forName(&quot;com.mysql.jdbc.Driver&quot;)
+</span>56 <span style=''>    //val con1: Connection = DriverManager.getConnection(&quot;jdbc:mysql://localhost/scala_1&quot;, &quot;root&quot;, &quot;root&quot;)
+</span>57 <span style=''>    //val stmt: Statement = con1.createStatement
+</span>58 <span style=''>    </span><span style='background: #AEF1AE'>stmt.executeUpdate(&quot;Delete from Employee&quot;)</span><span style=''>
+</span>59 <span style=''>    </span><span style='background: #AEF1AE'>1</span><span style=''>
+</span>60 <span style=''>  }
+</span>61 <span style=''>
+</span>62 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          147
+          -
+          185
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Class.forName
+        </td>
+        <td style="background: #AEF1AE">
+          java.lang.Class.forName(&quot;com.mysql.jdbc.Driver&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          211
+          -
+          288
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.DriverManager.getConnection
+        </td>
+        <td style="background: #AEF1AE">
+          java.sql.DriverManager.getConnection(&quot;jdbc:mysql://localhost/scala_1&quot;, &quot;root&quot;, &quot;root&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          313
+          -
+          333
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Connection.createStatement
+        </td>
+        <td style="background: #AEF1AE">
+          connect.this.con1.createStatement()
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          609
+          -
+          736
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeUpdate
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeUpdate(&quot;insert into Employee(id,name,address,phone,dept_id,project_id) values(1,\'Himanshu\',\'Noida\',9090,101,1001)&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          741
+          -
+          813
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeUpdate
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeUpdate(&quot;insert into Department(id,name) values(101,\'Java\')&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          818
+          -
+          924
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeUpdate
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeUpdate(&quot;insert into Project(id,name,dept_id,client_id) values(1001,\'Carbonn Data\',101,10001)&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          929
+          -
+          1036
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeUpdate
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeUpdate(&quot;insert into Client(id,name,address,project_id) values(10001,\'TCS\',\'Noida Delhi\',1001)&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          1041
+          -
+          1042
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          1300
+          -
+          1343
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeQuery
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeQuery(&quot;select * from Employee&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          1348
+          -
+          1348
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          1374
+          -
+          1516
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          {
+  scala.Predef.println(rs.getInt(1).+(&quot;  &quot;).+(rs.getString(2)).+(&quot; &quot;).+(rs.getString(3)).+(&quot; &quot;).+(rs.getString(4)).+(&quot; &quot;).+(rs.getString(5)).+(&quot; &quot;).+(rs.getString(6)));
+  while$1()
+}
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          1355
+          -
+          1364
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.next
+        </td>
+        <td style="background: #AEF1AE">
+          rs.next()
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          1348
+          -
+          1348
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          1374
+          -
+          1516
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(rs.getInt(1).+(&quot;  &quot;).+(rs.getString(2)).+(&quot; &quot;).+(rs.getString(3)).+(&quot; &quot;).+(rs.getString(4)).+(&quot; &quot;).+(rs.getString(5)).+(&quot; &quot;).+(rs.getString(6)))
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          1452
+          -
+          1467
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #F0ADAD">
+          rs.getString(4)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          1392
+          -
+          1393
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          1494
+          -
+          1497
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; &quot;
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          1422
+          -
+          1425
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; &quot;
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          1404
+          -
+          1419
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #F0ADAD">
+          rs.getString(2)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          1382
+          -
+          1515
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #F0ADAD">
+          rs.getInt(1).+(&quot;  &quot;).+(rs.getString(2)).+(&quot; &quot;).+(rs.getString(3)).+(&quot; &quot;).+(rs.getString(4)).+(&quot; &quot;).+(rs.getString(5)).+(&quot; &quot;).+(rs.getString(6))
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          1446
+          -
+          1449
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; &quot;
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1476
+          -
+          1491
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #F0ADAD">
+          rs.getString(5)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          1470
+          -
+          1473
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; &quot;
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          1500
+          -
+          1515
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #F0ADAD">
+          rs.getString(6)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          1397
+          -
+          1401
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;  &quot;
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          1428
+          -
+          1443
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #F0ADAD">
+          rs.getString(3)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          1381
+          -
+          1381
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.CurdAssignment.while$1
+        </td>
+        <td style="background: #F0ADAD">
+          while$1()
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          1548
+          -
+          1589
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeQuery
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeQuery(&quot;select * from Client&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          1594
+          -
+          1594
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          1601
+          -
+          1611
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.next
+        </td>
+        <td style="background: #AEF1AE">
+          rs1.next()
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          1594
+          -
+          1594
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          1621
+          -
+          1713
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.println(rs1.getInt(1).+(&quot;  &quot;).+(rs1.getString(2)).+(rs1.getString(3)).+(&quot; &quot;).+(rs1.getString(4)));
+  while$2()
+}
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          1652
+          -
+          1668
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs1.getString(2)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          1696
+          -
+          1712
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs1.getString(4)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          1628
+          -
+          1628
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.CurdAssignment.while$2
+        </td>
+        <td style="background: #AEF1AE">
+          while$2()
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          1645
+          -
+          1649
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;  &quot;
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          1690
+          -
+          1693
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot; &quot;
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          1621
+          -
+          1713
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(rs1.getInt(1).+(&quot;  &quot;).+(rs1.getString(2)).+(rs1.getString(3)).+(&quot; &quot;).+(rs1.getString(4)))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          1629
+          -
+          1712
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          rs1.getInt(1).+(&quot;  &quot;).+(rs1.getString(2)).+(rs1.getString(3)).+(&quot; &quot;).+(rs1.getString(4))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          1640
+          -
+          1641
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          1671
+          -
+          1687
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs1.getString(3)
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          1745
+          -
+          1790
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeQuery
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeQuery(&quot;select * from Department&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          1822
+          -
+          1870
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.println(rs2.getInt(1).+(&quot;  &quot;).+(rs2.getString(2)));
+  while$3()
+}
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          1795
+          -
+          1795
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          1802
+          -
+          1812
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.next
+        </td>
+        <td style="background: #AEF1AE">
+          rs2.next()
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          1795
+          -
+          1795
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          1841
+          -
+          1842
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          1830
+          -
+          1869
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          rs2.getInt(1).+(&quot;  &quot;).+(rs2.getString(2))
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          1853
+          -
+          1869
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs2.getString(2)
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          1829
+          -
+          1829
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.CurdAssignment.while$3
+        </td>
+        <td style="background: #AEF1AE">
+          while$3()
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          1846
+          -
+          1850
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;  &quot;
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          1822
+          -
+          1870
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(rs2.getInt(1).+(&quot;  &quot;).+(rs2.getString(2)))
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          1902
+          -
+          1944
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeQuery
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeQuery(&quot;select * from Project&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          1949
+          -
+          1949
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          1976
+          -
+          2068
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.println(rs3.getInt(1).+(&quot;  &quot;).+(rs3.getString(2)).+(rs3.getString(3)).+(&quot; &quot;).+(rs3.getString(4)));
+  while$4()
+}
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          1956
+          -
+          1966
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.next
+        </td>
+        <td style="background: #AEF1AE">
+          rs3.next()
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          1949
+          -
+          1949
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          2045
+          -
+          2048
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot; &quot;
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          1976
+          -
+          2068
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(rs3.getInt(1).+(&quot;  &quot;).+(rs3.getString(2)).+(rs3.getString(3)).+(&quot; &quot;).+(rs3.getString(4)))
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          2000
+          -
+          2004
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;  &quot;
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          1995
+          -
+          1996
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          2026
+          -
+          2042
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs3.getString(3)
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          1984
+          -
+          2067
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          rs3.getInt(1).+(&quot;  &quot;).+(rs3.getString(2)).+(rs3.getString(3)).+(&quot; &quot;).+(rs3.getString(4))
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          2051
+          -
+          2067
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs3.getString(4)
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          1983
+          -
+          1983
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.CurdAssignment.while$4
+        </td>
+        <td style="background: #AEF1AE">
+          while$4()
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          2007
+          -
+          2023
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.ResultSet.getString
+        </td>
+        <td style="background: #AEF1AE">
+          rs3.getString(2)
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          2079
+          -
+          2080
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          2317
+          -
+          2359
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.Statement.executeUpdate
+        </td>
+        <td style="background: #AEF1AE">
+          CurdAssignment.this.stmt.executeUpdate(&quot;Delete from Employee&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          59
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          2364
+          -
+          2365
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

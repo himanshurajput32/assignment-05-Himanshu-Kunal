@@ -1,0 +1,246 @@
+<scoverage 
+statement-count="69" statements-invoked="54" statement-rate="78.26" branch-rate="87.50" version="1.0" timestamp="1485954252506">
+    <packages>
+        <package name="edu.knoldus" statement-count="69" statements-invoked="54" statement-rate="78.26">
+            <classes>
+                <class 
+                name="edu.knoldus.connect" filename="edu/knoldus/CurdAssignment.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="edu.knoldus/connect/&lt;none&gt;" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus" class="connect" class-type="Trait" full-class-name="edu.knoldus.connect" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="&lt;none&gt;" start="211" end="288" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="connect" class-type="Trait" full-class-name="edu.knoldus.connect" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="&lt;none&gt;" start="147" end="185" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="connect" class-type="Trait" full-class-name="edu.knoldus.connect" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="&lt;none&gt;" start="313" end="333" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="edu.knoldus.CurdAssignment" filename="edu/knoldus/CurdAssignment.scala" statement-count="66" statements-invoked="51" statement-rate="77.27" branch-rate="87.50">
+                    <methods>
+                        <method 
+                        name="edu.knoldus/CurdAssignment/insertion" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="insertion" start="1041" end="1042" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="insertion" start="741" end="813" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="insertion" start="609" end="736" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="insertion" start="929" end="1036" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="insertion" start="818" end="924" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="edu.knoldus/CurdAssignment/deletion" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="deletion" start="2317" end="2359" line="58" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="deletion" start="2364" end="2365" line="59" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="edu.knoldus/CurdAssignment/retrieval" statement-count="59" statements-invoked="44" statement-rate="74.58" branch-rate="87.50">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1374" end="1516" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="2045" end="2048" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1822" end="1870" line="44" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1652" end="1668" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1594" end="1594" line="40" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1976" end="2068" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1902" end="1944" line="47" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1452" end="1467" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1696" end="1712" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1841" end="1842" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1348" end="1348" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1392" end="1393" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="2000" end="2004" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1830" end="1869" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1628" end="1628" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1601" end="1611" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1494" end="1497" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1949" end="1949" line="48" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1422" end="1425" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1853" end="1869" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1976" end="2068" line="48" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1995" end="1996" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="2079" end="2080" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="2026" end="2042" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1594" end="1594" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1829" end="1829" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1404" end="1419" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1382" end="1515" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1645" end="1649" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1446" end="1449" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1795" end="1795" line="44" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1802" end="1812" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1374" end="1516" line="36" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1690" end="1693" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1984" end="2067" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1355" end="1364" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1621" end="1713" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1476" end="1491" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1548" end="1589" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="2051" end="2067" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1983" end="1983" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1846" end="1850" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1956" end="1966" line="48" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1629" end="1712" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1348" end="1348" line="36" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1300" end="1343" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1470" end="1473" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1822" end="1870" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1500" end="1515" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="2007" end="2023" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1397" end="1401" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1640" end="1641" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1621" end="1713" line="40" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1949" end="1949" line="48" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1428" end="1443" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1745" end="1790" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1795" end="1795" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1671" end="1687" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus" class="CurdAssignment" class-type="Class" full-class-name="edu.knoldus.CurdAssignment" source="/home/knoldus/Application/Database-assgnment/src/main/scala/edu/knoldus/CurdAssignment.scala" method="retrieval" start="1381" end="1381" line="37" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>
